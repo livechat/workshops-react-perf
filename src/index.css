@@ -1,0 +1,84 @@
+body,
+input,
+textarea {
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.message {
+  margin-top: 1em;
+}
+
+.author {
+  font-size: 0.8em;
+  opacity: 0.6;
+}
+
+.messageState {
+  opacity: 0.4;
+  font-size: 0.7em;
+}
+
+.messageList {
+  flex-grow: 1;
+  overflow-y: auto;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 10px;
+}
+
+.messageInput {
+  /* background: #eee; */
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  margin-right: 1em;
+}
+
+.agentbar {
+  display: flex;
+  align-items: center;
+  padding: 0.5em;
+}
+
+.avatar img {
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.agentName {
+  font-size: 1.2em;
+}
+
+.agentTitle {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.messageInput .input {
+  background: transparent;
+  border: 0;
+  padding: 0.5em;
+  width: 100%;
+}
+
+.app {
+  width: 500px;
+  height: 500px;
+  border: 1px solid #000;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.titlebar {
+  border-bottom: 1px solid #000;
+  text-align: center;
+  padding: 0.5em;
+}

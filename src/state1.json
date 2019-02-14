@@ -1,0 +1,28 @@
+{
+  "agent": {
+    "name": "John",
+    "title": "agent"
+  },
+  "messages": [
+    {
+      "text": "Hi",
+      "author": "John",
+      "messageState": "delivered"
+    },
+    {
+      "text": "How can I help you?",
+      "author": "John",
+      "messageState": "delivered"
+    },
+    {
+      "text": "Hi",
+      "author": "Customer",
+      "messageState": "delivered"
+    },
+    {
+      "text": "I am looking for shoes",
+      "author": "Customer",
+      "messageState": "delivered"
+    }
+  ]
+}
