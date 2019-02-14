@@ -7,6 +7,7 @@ class MessageInput extends React.Component {
     this.props.boundSetMessageDraft(event.target.value);
   };
   render() {
+    const { hasText } = this.props;
     return (
       <div className="messageInput">
         <textarea
@@ -14,6 +15,12 @@ class MessageInput extends React.Component {
           onChange={this.handleInputChange}
           placeholder="Type message here..."
         />
+        <button
+          disabled={!hasText}
+          className={`send ${hasText ? "" : "disabled"}`}
+        >
+          Send
+        </button>
       </div>
     );
   }

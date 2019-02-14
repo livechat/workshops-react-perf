@@ -7,13 +7,13 @@ import AgentBar from "./AgentBar";
 
 class App extends React.Component {
   render() {
-    const { messages } = this.props;
+    const { messages, messageDraft } = this.props;
     return (
       <div className="app">
         <div className="titlebar">Chat</div>
         <AgentBar />
         <MessageList messages={messages} />
-        <MessageInput />
+        <MessageInput hasText={Boolean(messageDraft)} />
       </div>
     );
   }
