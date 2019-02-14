@@ -1,7 +1,7 @@
 import * as React from "react";
 import Message from "./Message";
 
-class MessageList extends React.PureComponent {
+class MessageList extends React.Component {
   render() {
     const { messages } = this.props;
     return (
