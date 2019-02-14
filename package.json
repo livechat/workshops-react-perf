@@ -5,6 +5,7 @@
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-redux": "^6.0.0",
     "why-did-you-update": "^1.0.6"
   },
   "devDependencies": {
