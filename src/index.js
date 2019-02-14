@@ -4,13 +4,9 @@ import App from "./App";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { SET_MESSAGE_DRAFT, SET_MESSAGE_STATE } from "./actionsTypes";
-import { whyDidYouUpdate } from "why-did-you-update";
 import defaultState from "./state1.json";
-// import defaultState from "./state2.json";
 
 import "./index.css";
-
-whyDidYouUpdate(React);
 
 const reducer = (state = defaultState, action) => {
   switch (action.type) {
@@ -19,18 +15,6 @@ const reducer = (state = defaultState, action) => {
         ...state,
         messageDraft: action.messageDraft
       };
-    // case SET_MESSAGE_STATE: {
-    //   return {
-    //     ...state,
-    //     messagesById: {
-    //       ...state.messagesById,
-    //       [action.index]: {
-    //         ...state.messagesById[action.index],
-    //         messageState: action.messageState
-    //       }
-    //     }
-    //   };
-    // }
     case SET_MESSAGE_STATE: {
       return {
         ...state,
@@ -50,15 +34,6 @@ const store = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
-let last = false;
-setInterval(() => {
-  store.dispatch({
-    type: SET_MESSAGE_STATE,
-    index: "message2",
-    messageState: last ? "seen" : "delivered"
-  });
-  last = !last;
-}, 1000);
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
