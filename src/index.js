@@ -4,7 +4,8 @@ import App from "./App";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { SET_MESSAGE_DRAFT, SET_MESSAGE_STATE } from "./actionsTypes";
-import defaultState from "./state1.json";
+import defaultState from "./simpleState.json";
+// import defaultState from "./complexState.json";
 
 import "./index.css";
 
