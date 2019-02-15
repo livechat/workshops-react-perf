@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 class AgentBar extends React.Component {
   render() {
-    const { name, title } = this.props.agentDetails;
+    const { name, title } = this.props;
     return (
       <div className="agentbar">
         <div className="avatar">
@@ -26,7 +26,7 @@ const selectAgent = state => {
 };
 
 const mapStateToProps = state => ({
-  agentDetails: selectAgent(state)
+  ...selectAgent(state)
 });
 
 export default connect(mapStateToProps)(AgentBar);
