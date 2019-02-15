@@ -5,7 +5,6 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { SET_MESSAGE_DRAFT, SET_MESSAGE_STATE } from "./actionsTypes";
 import defaultState from "./simpleState.json";
-// import defaultState from "./complexState.json";
 
 import { whyDidYouUpdate } from "why-did-you-update";
 
@@ -22,11 +21,13 @@ const reducer = (state = defaultState, action) => {
     case SET_MESSAGE_STATE: {
       return {
         ...state,
-        messages: state.messages.map((message, index) =>
-          index === action.index
-            ? { ...message, messageState: action.messageState }
-            : message
-        )
+        messagesById: {
+          ...state.messagesById,
+          [action.index]: {
+            ...state.messagesById[action.index],
+            messageState: action.messageState
+          }
+        }
       };
     }
     default:
@@ -43,7 +44,7 @@ let last = false;
 setInterval(() => {
   store.dispatch({
     type: SET_MESSAGE_STATE,
-    index: 2,
+    index: "message2",
     messageState: last ? "seen" : "delivered"
   });
   last = !last;

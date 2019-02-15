@@ -1,18 +1,14 @@
-import React from "react";
-import Message from "./Message";
+import * as React from "react";
+import MessageListItem from "./MessageListItem";
 
-class MessageList extends React.Component {
+class MessageList extends React.PureComponent {
   render() {
     const { messages } = this.props;
     return (
       <div className="messageList">
-        {messages.map(({ author, text, messageState }, index) => (
-          <Message
-            author={author}
-            text={text}
-            key={index}
-            messageState={messageState}
-          />
+        <h3>Messages</h3>
+        {messages.map(messageId => (
+          <MessageListItem key={messageId} id={messageId} />
         ))}
       </div>
     );

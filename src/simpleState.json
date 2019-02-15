@@ -3,26 +3,27 @@
     "name": "John",
     "title": "agent"
   },
-  "messages": [
-    {
+  "messagesById": {
+    "message1": {
       "text": "Hi",
       "author": "John",
       "messageState": "delivered"
     },
-    {
+    "message2": {
       "text": "How can I help you?",
       "author": "John",
       "messageState": "delivered"
     },
-    {
+    "message3": {
       "text": "Hi",
       "author": "Customer",
       "messageState": "delivered"
     },
-    {
+    "message4": {
       "text": "I am looking for shoes",
       "author": "Customer",
       "messageState": "delivered"
     }
-  ]
+  },
+  "messages": ["message1", "message2", "message3", "message4"]
 }
