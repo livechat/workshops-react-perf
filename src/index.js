@@ -5,8 +5,11 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { SET_MESSAGE_DRAFT, SET_MESSAGE_STATE } from "./actionsTypes";
 import defaultState from "./state1.json";
+import { whyDidYouUpdate } from "why-did-you-update";
 
 import "./index.css";
+
+whyDidYouUpdate(React);
 
 const reducer = (state = defaultState, action) => {
   switch (action.type) {
