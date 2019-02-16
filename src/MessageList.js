@@ -7,11 +7,13 @@ class MessageList extends React.PureComponent {
     return (
       <div className="messageList">
         <h3>Messages</h3>
-        {messages.map(group => {
-          return group.map(messageId => (
-            <MessageListItem key={messageId} id={messageId} />
-          ));
-        })}
+        {messages.map(group => (
+          <div className="messageGroup">
+            {group.map(messageId => (
+              <MessageListItem key={messageId} id={messageId} />
+            ))}
+          </div>
+        ))}
       </div>
     );
   }
